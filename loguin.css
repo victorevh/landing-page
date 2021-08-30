@@ -1,0 +1,55 @@
+
+/* formulario loguin*/
+#session-loguin{
+    background-color: blueviolet;
+}
+#loguin {
+    background-color: rgb(1, 32, 32);
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+#loguin h3{
+    text-align: center;
+    color:  white;
+    font-family: raleway;
+}
+
+#loguin input[type=text],
+#loguin input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+#loguin input[type=submit]{
+    width:100%;
+    height:30%;
+    cursor: pointer;
+    background:  blueviolet;
+    color: white;
+    border: 0;
+    border-radius:20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#loguin input[type=submit]:hover{
+    background-color:  rgb(109, 21, 192);
+}
+
+#loguin input[type=text]:focus{
+    outline: 0; /* reduzir borda do input*/
+}
+
+#loguin input[type=password]:focus{
+    outline: 0;
+}

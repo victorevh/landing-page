@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+
+/* resetando o CSS */
+*{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: raleway;
+}
+
+/* Menu */
+#menu-starter{
+    background-color: rgb(1, 32, 32);
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+
+#menu-starter ul{
+    max-width: 1200px; /*limitar a borda do menu*/
+    list-style: none;
+    padding: 0%;
+}
+
+#menu-starter ul li{
+    display: inline; /*para que os itens do menu filhos do id (li) fiquem um ao lado do outro*/
+}
+
+#menu-starter ul li a{
+    color: #fff ;
+    padding: 10px; /*Distancia de um botão a outro*/
+    text-decoration: none; /*Remover linhas do link*/
+    display: inline-block; /*para que os itens do menu filhos do li (a) fiquem um ao lado do outro com espaçamento do topo*/
+    transition: background .6s;
+}
+
+#menu-starter ul li a:hover{
+    background-color: blueviolet;
+}
+
+#menu-starter ul li:last-child a {
+    float: right;
+    background-color:blueviolet;    
+}
+
+/* SLIDE SHOW */
+
+body items-wrapper{
+    display:grid;
+    place-items: center;
+    height: 100vh;
+}
+
+#items-wrapper {
+    width: 1903px; /* retirar scroll lateral*/
+}
+
+#items {
+    display: flex; /* por os elementos da classe items fiquem um ao lado do outro*/
+    overflow-x: auto; /*scroll na forma lateral para a classe*/
+    scroll-snap-type: x mandatory; /*para imagem pular para a outra sem pausar*/
+    -webkit-overflow-scrolling: touch; /*para que o scrolling funcione em alguns navegadores*/
+    scroll-behavior: smooth; /* adiciona comportamento suavizado*/
+}
+.item {
+    flex: none; /* pegar todos os itens do flex e alargar eles de acordo com a pagina*/
+
+    width: 100%; /* adequar quadro da imagem a % do campo na largura*/
+    height: 920px;
+    scroll-snap-align: start; /*para imagem alinhar para o inicio dela*/
+
+    pointer-events:none; /*desativa os eventos do cursor ignorando o evento whell*/
+}
+
+img {
+    width: 100%; /* adequar imagem a 100% do campo na largura*/
+    height: 100%; /* adequar imagem a 100% do campo na altura*/
+
+    object-fit: cover; /* vai esticar a imagem e cobrir o canvas do pedaço */
+}
+
+/* Container-1 imagem ao lado do texto*/
+.container-1{
+    display:grid;
+    place-items: center;
+    width: 1903px; /* retirar scroll lateral*/
+    height: 1080px;
+    margin-bottom: 0x;
+}
+
+#container-info {
+
+    max-width: 1220px;
+    margin-bottom: -120px;
+
+}
+
+#container-info h1{
+    padding-top: 40px;
+    background-color: white;
+    color: black;
+    margin-bottom: 50px;
+}
+
+#container-info img{
+    width: 320px;
+    height: 240px;
+    display: inline;
+    float: right;
+    overflow: hidden;
+    border-radius: 4%;
+}
+
+#container-info p {
+    text-align: justify;
+    margin-right: 350px;
+    line-height: 1.9;
+    text-indent: 1.5cm;
+}
+
+    /* Cards */
+
+    .content{
+        display: flex;  
+        justify-content: center; /*ajustar eixo X*/
+        align-items: flex-start; /*ajustar eixo y*/
+        align-content: center;
+        width: 100%;
+        max-width: 1260px;
+    }
+
+    .card{
+        background-color: #fff;
+        box-shadow: 0px 2px 18px rgb(1, 32, 32);
+        border-radius: 20px;
+        width: 370px;
+    }
+
+    .mediaCard{
+        background: url("https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80") center/cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    .mediaCard-1{
+        background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80") center/cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    .mediaCard-2{
+        background: url("https://images.unsplash.com/photo-1508739773434-c26b3d09e071?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80") center/cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    .topCard{
+        padding: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .title{
+        margin-bottom: 15px;
+        color: black;
+    }
+
+    .secondText{
+        color: rgb(1, 32, 32);
+    }
+
+    .bottomCard{
+        padding: 20px;
+    }
+
+    .bottomText{
+        color: black;
+    }
+
+    .actions{
+        background: none;
+        border: none;
+        color: rgb(7, 14, 109);
+        cursor: pointer;
+        margin-top: 15px;
+    }
+
+/* formulario contato */
+
+.container-4{
+    place-items: center;
+    height: 950px;
+    width: 1903px; /* retirar scroll lateral*/
+    margin-bottom: 0x;
+    background-color: blueviolet;
+}
+
+#Contato-h1{
+    padding-top: 40px;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 32px;
+    width: 1220px;
+}
+
+#form-1 {
+    background-color: rgb(1, 32, 32);
+    max-width: 500px;
+    width: 70%;
+    padding: 20px;
+    position: initial;
+    margin-top: 300px;
+    margin-bottom: 100px;
+}
+
+#form-1 h3{
+    text-align: center;
+    color:  white;
+    font-family: raleway;
+}
+
+#form-1 input[type=text],
+#form-1 input[type=password]{
+    width: 100%;
+    height: 45px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+#form-1 input[type=submit]{
+    width:100%;
+    height:30%;
+    cursor: pointer;
+    background:  blueviolet;
+    color: white;
+    border: 0;
+    border-radius:20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#form-1 input[type=submit]:hover{
+    background-color:  rgb(109, 21, 192);
+}
+
+#form-1 input[type=text]:focus{
+    outline: 0; /* reduzir borda do input*/
+}
+
+#form-1 input[type=password]:focus{
+    outline: 0;
+}
+
+/*diferenciais*/
+
+.section {
+    display:grid;
+    place-items: center;
+    height: 100vh;
+    width: 1903px; /* retirar scroll lateral*/
+    margin-bottom: 0x;
+}
+
+.article {
+    display: block;
+    max-width: 1220px;
+    margin-bottom: 100px;
+}
+
+.differential{
+    place-items: center;
+    width: 1903px;
+    flex-wrap: wrap;
+}
+
+#about{
+    padding-top: 40px;
+    background-color: white;
+    color: black;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    font-size: 32px;
+    width: 1220px;
+}
+
+.about{
+    width: 1220px;
+    display: flex;
+    line-height: 1.9;
+}
+
+.about-info{
+    max-width: 610px;
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.about-info-2{
+    max-width: 610px;
+    padding: 20px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+.about-info h2{
+    margin-right: 20px;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.about-info p{
+    margin-right: 10px;
+    text-align: justify;
+    text-indent: 1.5cm;
+}
+
+.about-info-2 p{
+    margin-left: 10px;
+    text-align: justify;
+    text-indent: 1.5cm;
+}
+
+.group{
+    width: 1220px;
+}
+
+
+.group-h1{
+    padding-top: 20px;
+    background-color: white;
+    color: black;
+    margin-bottom: 50px;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 40px
+}
+
+.group-ul{
+    display: flex;
+    vertical-align: top;
+    flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+.group-itens{
+    width: 270px;
+    -webkit-box-flex: 1; 
+}
+
+.img-1 {
+    background: url("https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80") center/cover;
+    -webkit-box-flex: 1;
+    width: 142px;
+    height: 142px;
+    margin: 0px auto 40px;
+    background-repeat: no-repeat;
+    margin-bottom: -20px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.group-text{
+    display: block;
+    text-align: center;
+    display: inline-block;
+    flex-grow: 1;
+    margin: 16px 0px;
+}
+
+.txt-h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 21px;
+    padding: 0px;
+    margin-top: 35px;
+}
+
+.txt-2{
+    margin: 0px;
+    font-size: 16px;
+    padding: 20px;
+    text-align: justify;
+
+}
