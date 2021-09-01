@@ -1,4 +1,4 @@
 # Landing-page
 
-Developing skills on static pages
+Studing developing skills on static pages
 
